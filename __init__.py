@@ -31,17 +31,6 @@ def mongraphique():
 def monhistogramme():
     return render_template("histogramme.html")
 
-@app.route('/tawarano/')
-def meteo():
-    response = urlopen('https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits')
-    raw_content = response.read()
-    json_content = json.loads(raw_content.decode('utf-8'))
-    results = []
-    for list_element in json_content.get('list', []):
-        dt_value = list_element.get('Commit')
-        results.append({'date': dt_value})
-    return jsonify(results=results)
-
 
 @app.route("/")
 def hello_world():

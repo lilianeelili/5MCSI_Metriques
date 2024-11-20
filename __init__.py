@@ -12,6 +12,5 @@ def hello_world():
   return
 render_template('hello.html') #Comm2
                                                                                                                                       
-  
 if __name__ == "__main__":
   app.run(debug=True)

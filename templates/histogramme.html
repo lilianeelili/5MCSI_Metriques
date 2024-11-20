@@ -16,7 +16,8 @@
 
         var options = {
           title: 'évolution des températures de la ville de Tawarano',
-          legend: { position: 'none' },
+          curveType: 'function',
+          legend: { position: 'bottom' }
         };
 
         var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
@@ -25,7 +26,7 @@
       fetch('/tawarano/')
     .then(response => response.json())
     .then(data => {
-      drawChart(data);
+      drawChart(dataTable);
     })
     </script>
   </head>

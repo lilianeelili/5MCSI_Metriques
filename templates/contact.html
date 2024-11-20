@@ -5,17 +5,21 @@
  </head>  
 <body>
     <h2>Ma fiche contact</h2>
-  <form action="/submit" method="post">
-    <label for="nom">Nom : </label>
-    <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br><br>
-
-    <label for="prénom">Prénom : </label>
-    <input type="text" id="prénom" name="prénom" placeholder="Entrez votre prénom" required><br><br>
-
-    <label for="message">Méssage : </label>
-    <textarea type="text" id="message" name="message" placeholder="Entrez votre message" required></textarea>
-
-    <button type="submit">Envoyer</button>
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Nom</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrez votre nom">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Prenom</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre prénom">
+  </div>
+    <div class="form-group">
+    <label for="exampleInputPassword2">Message</label>
+    <input type="password2" class="form-control" id="exampleInputPassword2" placeholder="Entrez votre message">
+  </div>
+  <button type="submit" class="btn btn-primary">Entree</button>
+</form>
 </body>
 </html>
 

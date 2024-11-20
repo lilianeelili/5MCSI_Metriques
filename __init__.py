@@ -39,7 +39,7 @@ def meteo():
     results = []
     for list_element in json_content.get('list', []):
         dt_value = list_element.get('Commit')
-        results.append({'date': dt_value, 'temp': temp_day_value})
+        results.append({'date': dt_value})
     return jsonify(results=results)
 
 

@@ -21,7 +21,7 @@
         };
 
         var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
-        chart.draw(data, options);
+        chart.draw(dataTable, options);
       }
       fetch('/tawarano/')
     .then(response => response.json())

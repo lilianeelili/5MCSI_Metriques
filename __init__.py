@@ -31,9 +31,17 @@ def mongraphique():
 def monhistogramme():
     return render_template("histogramme.html")
 
-@app.route("/commits/")
-def monhistogramme():
-    return render_template("commits.html")
+@app.route('/tawarano/')
+def meteo():
+    response = urlopen('https://samples.openweathermap.org/data/2.5/forecast?lat=0&lon=0&appid=xxx')
+    raw_content = response.read()
+    json_content = json.loads(raw_content.decode('utf-8'))
+    results = []
+    for list_element in json_content.get('list', []):
+        dt_value = list_element.get('Commit')
+        results.append({'date': dt_value, 'temp': temp_day_value})
+    return jsonify(results=results)
+
 
 @app.route("/")
 def hello_world():
